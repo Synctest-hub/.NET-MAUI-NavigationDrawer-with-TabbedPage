@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationDrawerTabbed.TabbedPageWithNavigationDrawer"
+            xmlns:navigationdrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer"
+             Title="TabbedPageWithNavigationDrawer">
+    <NavigationPage Title="First Page">
+        <x:Arguments>
+            <ContentPage>
+            <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer1">
+                <navigationdrawer:SfNavigationDrawer.DrawerSettings>
+                    <navigationdrawer:DrawerSettings DrawerWidth="200"
+                                                     TouchThreshold="100"
+                                                     DrawerHeaderHeight="50"
+                                                     DrawerFooterHeight="50">
+                        <navigationdrawer:DrawerSettings.DrawerHeaderView>
+                            <Grid BackgroundColor="#6750A4">
+                                <VerticalStackLayout VerticalOptions="Center"
+                                     HorizontalOptions="Center">
+                                    <Label Text="Header View" FontSize="14" TextColor="#FFFFFF"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </navigationdrawer:DrawerSettings.DrawerHeaderView>
+                            <navigationdrawer:DrawerSettings.DrawerContentView>
+                                <Grid>
+                                    <Label Text="Content View" FontSize="14" TextColor="Black"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                </Grid>
+                            </navigationdrawer:DrawerSettings.DrawerContentView>
+                        <navigationdrawer:DrawerSettings.DrawerFooterView>
+                            <Grid BackgroundColor="#6750A4">
+                                <VerticalStackLayout VerticalOptions="Center"
+                                     HorizontalOptions="Center">
+                                    <Label Text="Footer View" FontSize="14" TextColor="#FFFFFF"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </navigationdrawer:DrawerSettings.DrawerFooterView>
+                    </navigationdrawer:DrawerSettings>
+                </navigationdrawer:SfNavigationDrawer.DrawerSettings>
+
+                <navigationdrawer:SfNavigationDrawer.ContentView>
+                    <Grid x:Name="mainContentView1" 
+      BackgroundColor="White" RowDefinitions="Auto,*">
+                        <HorizontalStackLayout BackgroundColor="#6750A4" Spacing="10" Padding="5,0,0,0">
+                            <ImageButton x:Name="hamburgerButton1"
+                         HeightRequest="50"
+                         WidthRequest="50"
+                         HorizontalOptions="Start"
+                         Source="hamburgericon.png"
+                         BackgroundColor="#6750A4"
+                         Clicked="hamburgerButton1_Clicked"/>
+                            <Label x:Name="headerLabel"
+                                   HeightRequest="50"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   Text="Home" FontSize="16"
+                                   TextColor="White"
+                                   BackgroundColor="#6750A4"/>
+                        </HorizontalStackLayout>
+
+                        <Label Grid.Row="1"
+                               Text="First Page"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" />
+                    </Grid>
+                </navigationdrawer:SfNavigationDrawer.ContentView>
+            </navigationdrawer:SfNavigationDrawer>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Second Page">
+        <x:Arguments>
+            <ContentPage>
+                <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer2">
+                    <navigationdrawer:SfNavigationDrawer.DrawerSettings>
+                        <navigationdrawer:DrawerSettings DrawerWidth="150"
+                                                         TouchThreshold="100"
+                                                         DrawerHeaderHeight="100"
+                                                         DrawerFooterHeight="100">
+                            <navigationdrawer:DrawerSettings.DrawerHeaderView>
+                                <Grid BackgroundColor="#6750A4">
+                                    <VerticalStackLayout VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+                                        <Label Text="Header View" TextColor="#FFFFFF"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </navigationdrawer:DrawerSettings.DrawerHeaderView>
+                            <navigationdrawer:DrawerSettings.DrawerContentView>
+                                <Grid>
+                                    <Label Text="Content View" FontSize="14" TextColor="Black"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                </Grid>
+                            </navigationdrawer:DrawerSettings.DrawerContentView>
+                            <navigationdrawer:DrawerSettings.DrawerFooterView>
+                                <Grid BackgroundColor="#6750A4">
+                                    <VerticalStackLayout VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+                                        <Label Text="Footer View" TextColor="#FFFFFF"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </navigationdrawer:DrawerSettings.DrawerFooterView>
+                        </navigationdrawer:DrawerSettings>
+                    </navigationdrawer:SfNavigationDrawer.DrawerSettings>
+
+                    <navigationdrawer:SfNavigationDrawer.ContentView>
+                        <Grid x:Name="mainContentView2" 
+  BackgroundColor="White" RowDefinitions="Auto,*">
+                            <HorizontalStackLayout BackgroundColor="#6750A4" Spacing="10" Padding="5,0,0,0">
+                                <ImageButton x:Name="hamburgerButton2"
+                                             HeightRequest="50"
+                                             WidthRequest="50"
+                                             HorizontalOptions="Start"
+                                             Source="hamburgericon.png"
+                                             BackgroundColor="#6750A4"
+                                             Clicked="hamburgerButton2_Clicked"/>
+                                <Label x:Name="headerLabel2"
+                                       HeightRequest="50"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"
+                                       Text="Home" FontSize="16"
+                                       TextColor="White"
+                                       BackgroundColor="#6750A4"/>
+                            </HorizontalStackLayout>
+
+                            <Label Grid.Row="1"
+                                   Text="Second Page"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" />
+                        </Grid>
+                    </navigationdrawer:SfNavigationDrawer.ContentView>
+                </navigationdrawer:SfNavigationDrawer>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>
